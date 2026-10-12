@@ -297,17 +297,51 @@ button {
   background: var(--white);
 }
 
-/* Hero stage — transfer visual */
+/* Hero stage — desktop & mobile are separate layouts */
 .hero-stage {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(0.2rem, 1.2vw, 0.55rem);
-  min-height: 200px;
-  width: 100%;
-  max-width: 420px;
-  margin-inline: auto;
   animation: rise 1s var(--ease) 0.22s both;
+}
+
+.hero-stage-mobi {
+  display: none;
+}
+
+.hero-stage-desk {
+  gap: clamp(0.6rem, 1.8vw, 1.4rem);
+  min-height: 320px;
+  width: 100%;
+  max-width: none;
+  justify-self: stretch;
+}
+
+.hero-stage-desk .stage-icon img {
+  width: clamp(160px, 18vw, 220px);
+  height: auto;
+  border-radius: 28%;
+  box-shadow:
+    0 28px 64px rgba(20, 77, 173, 0.38),
+    0 0 0 1px rgba(255, 255, 255, 0.4) inset;
+  animation: breathe 4.5s ease-in-out infinite;
+}
+
+.hero-stage-desk .stage-device {
+  width: 64px;
+  height: 96px;
+  border-radius: 14px;
+}
+
+.hero-stage-desk .stage-mac {
+  width: 118px;
+  height: 74px;
+  border-radius: 12px;
+}
+
+.hero-stage-desk .stage-beam {
+  width: clamp(72px, 9vw, 120px);
+  height: 4px;
 }
 
 .stage-icon {
@@ -315,29 +349,19 @@ button {
   flex-shrink: 0;
 }
 
-.stage-icon img {
-  width: clamp(72px, 16vw, 120px);
-  height: auto;
-  border-radius: 28%;
-  box-shadow:
-    0 16px 40px rgba(20, 77, 173, 0.32),
-    0 0 0 1px rgba(255, 255, 255, 0.4) inset;
-  animation: breathe 4.5s ease-in-out infinite;
-}
-
 .stage-icon::after {
   content: "";
   position: absolute;
-  inset: -18%;
+  inset: -22%;
   border-radius: 40%;
-  background: radial-gradient(circle, rgba(30, 107, 230, 0.28), transparent 68%);
+  background: radial-gradient(circle, rgba(30, 107, 230, 0.3), transparent 68%);
   z-index: -1;
   animation: pulse-glow 4.5s ease-in-out infinite;
 }
 
 @keyframes breathe {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes pulse-glow {
@@ -346,51 +370,42 @@ button {
 }
 
 .stage-device {
-  width: clamp(36px, 9vw, 48px);
-  height: clamp(54px, 13vw, 72px);
-  border-radius: 10px;
+  border-radius: 12px;
   background: linear-gradient(160deg, var(--white), #d8e7ff);
   border: 2px solid rgba(30, 107, 230, 0.35);
-  box-shadow: 0 10px 22px rgba(20, 77, 173, 0.14);
+  box-shadow: 0 14px 32px rgba(20, 77, 173, 0.16);
   position: relative;
   flex-shrink: 0;
-}
-
-.stage-mac {
-  width: clamp(58px, 14vw, 80px);
-  height: clamp(38px, 9vw, 52px);
-  border-radius: 8px;
 }
 
 .stage-mac::after {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -10px;
+  bottom: -12px;
   transform: translateX(-50%);
-  width: 48px;
-  height: 6px;
-  border-radius: 0 0 4px 4px;
-  background: rgba(30, 107, 230, 0.25);
+  width: 56%;
+  height: 7px;
+  border-radius: 0 0 5px 5px;
+  background: rgba(30, 107, 230, 0.28);
 }
 
 .stage-label {
   position: absolute;
   left: 50%;
-  bottom: -1.6rem;
+  bottom: -1.75rem;
   transform: translateX(-50%);
   font-family: var(--font-display);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--blue-ink);
-  opacity: 0.7;
+  opacity: 0.72;
   white-space: nowrap;
 }
 
 .stage-beam {
   position: relative;
-  width: clamp(28px, 7vw, 64px);
   height: 3px;
   border-radius: 999px;
   background: linear-gradient(90deg, transparent, var(--blue), transparent);
@@ -463,32 +478,54 @@ button {
   font-size: 1.05rem;
 }
 
-.feature-list {
+.feature-grid {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.75rem 2.5rem;
+  gap: 1.1rem;
 }
 
-.feature-list li {
+.feature-card {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
-  padding-top: 1.1rem;
-  border-top: 2px solid var(--blue);
+  gap: 0.55rem;
+  padding: 1.45rem 1.4rem 1.5rem;
+  border-radius: 22px;
+  background:
+    linear-gradient(165deg, rgba(255, 255, 255, 0.95), rgba(232, 241, 255, 0.65));
+  border: 1px solid rgba(30, 107, 230, 0.12);
+  box-shadow: 0 14px 36px rgba(20, 77, 173, 0.07);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s;
 }
 
-.feature-list strong {
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 44px rgba(20, 77, 173, 0.12);
+}
+
+.feature-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  color: var(--blue);
+  background: rgba(30, 107, 230, 0.1);
+  margin-bottom: 0.15rem;
+}
+
+.feature-card strong {
   font-family: var(--font-display);
   font-size: 1.15rem;
   letter-spacing: -0.02em;
 }
 
-.feature-list span {
+.feature-card > span:last-child {
   color: var(--muted);
-  font-size: 0.98rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
 }
 
 .steps {
@@ -496,40 +533,59 @@ button {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 1.25rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 
-.steps li {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1.15rem;
-  align-items: start;
+.step-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 100%;
+  padding: 1.5rem 1.35rem 1.55rem;
+  border-radius: 22px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 32px rgba(13, 27, 51, 0.05);
+  overflow: hidden;
+}
+
+.step-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--blue), var(--sky));
 }
 
 .step-num {
-  display: grid;
-  place-items: center;
-  width: 2.4rem;
-  height: 2.4rem;
-  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1rem;
-  color: var(--white);
-  background: linear-gradient(135deg, var(--blue), var(--blue-ink));
-  box-shadow: 0 8px 20px rgba(30, 107, 230, 0.28);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--blue);
+  background: var(--blue-soft);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  width: fit-content;
 }
 
-.steps strong {
+.step-body strong {
   display: block;
   font-family: var(--font-display);
-  font-size: 1.1rem;
-  margin-bottom: 0.2rem;
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.02em;
 }
 
-.steps p {
+.step-body p {
   margin: 0;
   color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
 }
 
 /* —— Download —— */
@@ -857,6 +913,11 @@ button {
   gap: 1rem;
 }
 
+.contact-panel-email {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 720px;
+}
+
 .contact-block {
   padding: 1.4rem 1.35rem;
   border-radius: var(--radius);
@@ -882,12 +943,6 @@ button {
   min-height: 42px;
   padding: 0 1rem;
   word-break: break-all;
-}
-
-.contact-qr {
-  border-radius: 12px;
-  border: 1px solid var(--line);
-  background: var(--white);
 }
 
 /* —— Footer —— */
@@ -1012,24 +1067,57 @@ button {
     justify-content: center;
   }
 
-  .hero-stage {
-    margin-top: 1.25rem;
-    min-height: 140px;
-    max-width: min(100%, 340px);
+  .hero-stage-desk {
+    display: none;
   }
 
-  .stage-icon img {
-    width: clamp(56px, 15vw, 78px);
+  .hero-stage-mobi {
+    display: flex;
+    gap: 0.35rem;
+    margin: 1.4rem auto 0;
+    min-height: 110px;
+    max-width: 300px;
   }
 
-  .stage-label {
-    font-size: 0.62rem;
-    bottom: -1.35rem;
+  .hero-stage-mobi .stage-icon img {
+    width: 58px;
+    height: auto;
+    border-radius: 22%;
+    box-shadow: 0 12px 28px rgba(20, 77, 173, 0.3);
+    animation: breathe 4.5s ease-in-out infinite;
   }
 
-  .feature-list,
+  .hero-stage-mobi .stage-icon::after {
+    inset: -14%;
+  }
+
+  .hero-stage-mobi .stage-device {
+    width: 34px;
+    height: 52px;
+    border-radius: 8px;
+  }
+
+  .hero-stage-mobi .stage-mac {
+    width: 54px;
+    height: 36px;
+    border-radius: 7px;
+  }
+
+  .hero-stage-mobi .stage-beam {
+    width: 36px;
+    height: 2px;
+  }
+
+  .hero-stage-mobi .stage-label {
+    font-size: 0.58rem;
+    bottom: -1.25rem;
+  }
+
+  .feature-grid,
+  .steps,
   .dl-grid,
-  .contact-panel {
+  .contact-panel,
+  .contact-panel-email {
     grid-template-columns: 1fr;
   }
 
@@ -1051,23 +1139,24 @@ button {
 @media (min-width: 881px) {
   .hero {
     min-height: 100svh;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
   }
 
   .hero-copy {
-    padding-right: 1rem;
+    padding-right: 0.5rem;
   }
 
-  .stage-icon img {
-    width: clamp(96px, 12vw, 128px);
-  }
-
-  .hero-stage {
-    max-width: 480px;
+  .hero-stage-mobi {
+    display: none;
   }
 }
 
 @media (max-width: 980px) and (min-width: 881px) {
-  .contact-panel {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-grid {
     grid-template-columns: 1fr 1fr;
   }
 }

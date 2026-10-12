@@ -54,7 +54,8 @@
         </div>
       </div>
 
-      <div class="hero-stage" aria-hidden="true">
+      <!-- Desktop: large transfer stage fills the right column -->
+      <div class="hero-stage hero-stage-desk" aria-hidden="true">
         <div class="stage-device stage-phone">
           <span class="stage-label">Phone</span>
         </div>
@@ -64,7 +65,30 @@
           <span class="packet p3"></span>
         </div>
         <div class="stage-icon">
-          <img src="assets/icon.png" width="120" height="120" alt="" />
+          <img src="assets/icon.png" width="200" height="200" alt="" />
+        </div>
+        <div class="stage-beam stage-beam-r">
+          <span class="packet p1"></span>
+          <span class="packet p2"></span>
+          <span class="packet p3"></span>
+        </div>
+        <div class="stage-device stage-mac">
+          <span class="stage-label">Mac</span>
+        </div>
+      </div>
+
+      <!-- Mobile: compact stage, separate sizing -->
+      <div class="hero-stage hero-stage-mobi" aria-hidden="true">
+        <div class="stage-device stage-phone">
+          <span class="stage-label">Phone</span>
+        </div>
+        <div class="stage-beam">
+          <span class="packet p1"></span>
+          <span class="packet p2"></span>
+          <span class="packet p3"></span>
+        </div>
+        <div class="stage-icon">
+          <img src="assets/icon.png" width="64" height="64" alt="" />
         </div>
         <div class="stage-beam stage-beam-r">
           <span class="packet p1"></span>
@@ -83,23 +107,23 @@
         <p data-i18n="how.lead">两台设备都装上，连同一个 Wi‑Fi。</p>
       </div>
       <ol class="steps">
-        <li>
-          <span class="step-num">1</span>
-          <div>
+        <li class="step-card">
+          <span class="step-num">01</span>
+          <div class="step-body">
             <strong data-i18n="how.s1.t">打开应用</strong>
             <p data-i18n="how.s1.d">每台设备会显示自己的 6 位配对码。</p>
           </div>
         </li>
-        <li>
-          <span class="step-num">2</span>
-          <div>
+        <li class="step-card">
+          <span class="step-num">02</span>
+          <div class="step-body">
             <strong data-i18n="how.s2.t">第一次配对</strong>
             <p data-i18n="how.s2.d">填对方的码，对方点「允许」。以后不用再填。</p>
           </div>
         </li>
-        <li>
-          <span class="step-num">3</span>
-          <div>
+        <li class="step-card">
+          <span class="step-num">03</span>
+          <div class="step-body">
             <strong data-i18n="how.s3.t">选文件发送</strong>
             <p data-i18n="how.s3.d">照片、视频或任意文件，点附近设备即可发出。</p>
           </div>
@@ -112,20 +136,32 @@
         <h2 data-i18n="features.title">只做一件事：把文件传过去</h2>
         <p data-i18n="features.lead">局域网直连，配对一次，以后点一下就发。</p>
       </div>
-      <ul class="feature-list">
-        <li>
+      <ul class="feature-grid">
+        <li class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 3v10m0 0l-3.5-3.5M12 13l3.5-3.5M5 16.5V19a2 2 0 002 2h10a2 2 0 002-2v-2.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
           <strong data-i18n="features.f1.t">不经过云</strong>
           <span data-i18n="features.f1.d">文件只在两台设备之间走，不上传到任何服务器。</span>
         </li>
-        <li>
+        <li class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M8 11V8a4 4 0 118 0v3M6.5 11h11a1.5 1.5 0 011.5 1.5v6A1.5 1.5 0 0117.5 20h-11A1.5 1.5 0 015 18.5v-6A1.5 1.5 0 016.5 11z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
           <strong data-i18n="features.f2.t">无账号无广告</strong>
           <span data-i18n="features.f2.d">打开就能用。没有注册，没有追踪，没有广告。</span>
         </li>
-        <li>
+        <li class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M7 11V8a5 5 0 0110 0v3M12 14v3M8.5 21h7A2.5 2.5 0 0018 18.5v-6A2.5 2.5 0 0015.5 10h-7A2.5 2.5 0 006 12.5v6A2.5 2.5 0 008.5 21z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
           <strong data-i18n="features.f3.t">配对才可发</strong>
           <span data-i18n="features.f3.d">对方屏幕上的 6 位码，还要对方点「允许」。只知道码发不过去。</span>
         </li>
-        <li>
+        <li class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 7h6v10H4V7zm10 0h6v10h-6V7zM10 12h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
           <strong data-i18n="features.f4.t">四端互通</strong>
           <span data-i18n="features.f4.d">安卓、iPhone、iPad、Mac，同一 Wi‑Fi 就能互相找、互相传。</span>
         </li>
@@ -232,18 +268,13 @@
       <div class="section-head">
         <p class="contact-kicker" data-i18n="contact.kicker">联系我们</p>
         <h2 data-i18n="contact.title">有问题随时找我们</h2>
-        <p data-i18n="contact.lead">产品咨询、反馈或合作，邮件或微信都可以。</p>
+        <p data-i18n="contact.lead">产品咨询、反馈或合作，发邮件即可。</p>
       </div>
-      <div class="contact-panel">
+      <div class="contact-panel contact-panel-email">
         <div class="contact-block">
           <h3 data-i18n="contact.support">支持与反馈</h3>
           <p data-i18n="contact.support.d">使用问题、Bug、功能建议，发邮件即可。</p>
           <a class="btn btn-primary" href="mailto:yunjiezhihui@cloudwisdom.site">yunjiezhihui@cloudwisdom.site</a>
-        </div>
-        <div class="contact-block">
-          <h3 data-i18n="contact.wechat">微信客服</h3>
-          <p data-i18n="contact.wechat.d">扫码添加，和 App 里「联系我们」是同一个二维码。</p>
-          <img class="contact-qr" src="assets/wechat-qr.png" width="160" height="160" alt="WeChat QR" />
         </div>
         <div class="contact-block">
           <h3 data-i18n="contact.pub">开发者</h3>
