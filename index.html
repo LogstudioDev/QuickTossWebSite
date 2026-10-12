@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>轻传 · QuickToss</title>
+  <meta name="description" content="同一 Wi‑Fi，手机与电脑之间直接传文件。无账号，不经过云，无广告。" />
+  <meta property="og:title" content="轻传 · QuickToss" />
+  <meta property="og:description" content="同一 Wi‑Fi，手机与电脑之间直接传文件。无账号，不经过云，无广告。" />
+  <meta property="og:image" content="assets/icon.png" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="top">
+    <a class="top-brand" href="#top" aria-label="轻传">
+      <img src="assets/icon.png" width="36" height="36" alt="" />
+      <span data-i18n="brand">轻传</span>
+    </a>
+    <nav class="top-nav">
+      <a href="#how" data-i18n="nav.how">怎么用</a>
+      <a href="#features" data-i18n="nav.features">特点</a>
+      <a href="#screens" data-i18n="nav.screens">界面</a>
+      <a href="#download" data-i18n="nav.download">下载</a>
+      <a href="#contact" data-i18n="nav.contact">联系</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" class="lang-btn is-active" data-lang="zh">中文</button>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="orb orb-a"></div>
+        <div class="orb orb-b"></div>
+        <div class="grid"></div>
+      </div>
+
+      <div class="hero-copy">
+        <p class="hero-brand" data-i18n="hero.brand">轻传</p>
+        <p class="hero-aka" data-i18n="hero.aka">QuickToss</p>
+        <h1 data-i18n="hero.title">同一 Wi‑Fi，文件直接过去</h1>
+        <p class="hero-lead" data-i18n="hero.lead">安卓、iPhone、iPad、Mac 互相传。无账号，不经过云，无广告。</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#download" data-i18n="hero.cta">立即下载</a>
+          <a class="btn btn-ghost" href="#how" data-i18n="hero.secondary">看看怎么用</a>
+        </div>
+      </div>
+
+      <div class="hero-stage" aria-hidden="true">
+        <div class="stage-device stage-phone">
+          <span class="stage-label">Phone</span>
+        </div>
+        <div class="stage-beam">
+          <span class="packet p1"></span>
+          <span class="packet p2"></span>
+          <span class="packet p3"></span>
+        </div>
+        <div class="stage-icon">
+          <img src="assets/icon.png" width="120" height="120" alt="" />
+        </div>
+        <div class="stage-beam stage-beam-r">
+          <span class="packet p1"></span>
+          <span class="packet p2"></span>
+          <span class="packet p3"></span>
+        </div>
+        <div class="stage-device stage-mac">
+          <span class="stage-label">Mac</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section how" id="how">
+      <div class="section-head">
+        <h2 data-i18n="how.title">三步开始传</h2>
+        <p data-i18n="how.lead">两台设备都装上，连同一个 Wi‑Fi。</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <span class="step-num">1</span>
+          <div>
+            <strong data-i18n="how.s1.t">打开应用</strong>
+            <p data-i18n="how.s1.d">每台设备会显示自己的 6 位配对码。</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">2</span>
+          <div>
+            <strong data-i18n="how.s2.t">第一次配对</strong>
+            <p data-i18n="how.s2.d">填对方的码，对方点「允许」。以后不用再填。</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">3</span>
+          <div>
+            <strong data-i18n="how.s3.t">选文件发送</strong>
+            <p data-i18n="how.s3.d">照片、视频或任意文件，点附近设备即可发出。</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section features" id="features">
+      <div class="section-head">
+        <h2 data-i18n="features.title">只做一件事：把文件传过去</h2>
+        <p data-i18n="features.lead">局域网直连，配对一次，以后点一下就发。</p>
+      </div>
+      <ul class="feature-list">
+        <li>
+          <strong data-i18n="features.f1.t">不经过云</strong>
+          <span data-i18n="features.f1.d">文件只在两台设备之间走，不上传到任何服务器。</span>
+        </li>
+        <li>
+          <strong data-i18n="features.f2.t">无账号无广告</strong>
+          <span data-i18n="features.f2.d">打开就能用。没有注册，没有追踪，没有广告。</span>
+        </li>
+        <li>
+          <strong data-i18n="features.f3.t">配对才可发</strong>
+          <span data-i18n="features.f3.d">对方屏幕上的 6 位码，还要对方点「允许」。只知道码发不过去。</span>
+        </li>
+        <li>
+          <strong data-i18n="features.f4.t">四端互通</strong>
+          <span data-i18n="features.f4.d">安卓、iPhone、iPad、Mac，同一 Wi‑Fi 就能互相找、互相传。</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section screens" id="screens">
+      <div class="section-head">
+        <h2 data-i18n="screens.title">打开就能用</h2>
+        <p data-i18n="screens.lead">附近设备、配对、发送、记录，一眼看明白。</p>
+      </div>
+      <div class="screen-carousel" data-carousel>
+        <button class="carousel-nav carousel-prev" type="button" aria-label="Previous" data-carousel-prev>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="carousel-track" data-carousel-track>
+          <figure class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="mock mock-home">
+              <header class="mock-bar">
+                <span class="mock-title" data-i18n="mock.home">轻传</span>
+                <span class="mock-icons">⋯</span>
+              </header>
+              <p class="mock-code-label" data-i18n="mock.code">本机配对码</p>
+              <p class="mock-code">482 791</p>
+              <p class="mock-sub" data-i18n="mock.nearby">附近设备</p>
+              <div class="mock-peer"><span>Mac · 书房</span><em data-i18n="mock.send">发送</em></div>
+              <div class="mock-peer"><span>Pixel 8</span><em data-i18n="mock.send">发送</em></div>
+            </div>
+            <figcaption data-i18n="screens.c1">主页 · 附近设备</figcaption>
+          </figure>
+          <figure class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="mock mock-pair">
+              <header class="mock-bar"><span class="mock-title" data-i18n="mock.pair">配对请求</span></header>
+              <p class="mock-pair-from" data-i18n="mock.pair.from">「Mac · 书房」想发给你文件</p>
+              <p class="mock-pair-hint" data-i18n="mock.pair.hint">确认是你认识的设备再允许</p>
+              <div class="mock-pair-actions">
+                <span class="mock-btn ghost" data-i18n="mock.deny">拒绝</span>
+                <span class="mock-btn primary" data-i18n="mock.allow">允许</span>
+              </div>
+            </div>
+            <figcaption data-i18n="screens.c2">配对 · 对方确认</figcaption>
+          </figure>
+          <figure class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="mock mock-send">
+              <header class="mock-bar"><span class="mock-title" data-i18n="mock.sending">发送中</span></header>
+              <div class="mock-file">vacation.jpg</div>
+              <div class="mock-progress"><i style="width:68%"></i></div>
+              <p class="mock-pct">68% · 12 MB / 18 MB</p>
+              <p class="mock-to" data-i18n="mock.to">发往 Mac · 书房</p>
+            </div>
+            <figcaption data-i18n="screens.c3">传输进度</figcaption>
+          </figure>
+          <figure class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="mock mock-hist">
+              <header class="mock-bar"><span class="mock-title" data-i18n="mock.history">传输记录</span></header>
+              <div class="mock-row"><b>vacation.jpg</b><span>收到 · 刚才</span></div>
+              <div class="mock-row"><b>合同.pdf</b><span>已发 · 昨天</span></div>
+              <div class="mock-row"><b>clip.mp4</b><span>收到 · 昨天</span></div>
+            </div>
+            <figcaption data-i18n="screens.c4">历史记录</figcaption>
+          </figure>
+        </div>
+        <button class="carousel-nav carousel-next" type="button" aria-label="Next" data-carousel-next>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="carousel-dots" data-carousel-dots></div>
+      </div>
+    </section>
+
+    <section class="section download" id="download">
+      <div class="section-head">
+        <h2 data-i18n="dl.title">下载</h2>
+        <p data-i18n="dl.lead">选你的平台。商店上架后链接会更新到这里。</p>
+      </div>
+      <div class="dl-grid">
+        <a class="dl-item" href="#" data-store="ios" aria-disabled="true">
+          <span class="dl-platform" data-i18n="dl.ios">iPhone / iPad</span>
+          <span class="dl-store">App Store</span>
+          <span class="dl-soon" data-i18n="dl.soon">即将上架</span>
+        </a>
+        <a class="dl-item" href="#" data-store="mac" aria-disabled="true">
+          <span class="dl-platform" data-i18n="dl.mac">Mac</span>
+          <span class="dl-store">Mac App Store</span>
+          <span class="dl-soon" data-i18n="dl.soon">即将上架</span>
+        </a>
+        <a class="dl-item" href="#" data-store="play" aria-disabled="true">
+          <span class="dl-platform" data-i18n="dl.android">Android</span>
+          <span class="dl-store">Google Play</span>
+          <span class="dl-soon" data-i18n="dl.soon">即将上架</span>
+        </a>
+        <a class="dl-item dl-item-ready" href="#" data-store="apk" id="apk-link">
+          <span class="dl-platform" data-i18n="dl.apk">Android APK</span>
+          <span class="dl-store" data-i18n="dl.apk.sub">官方安装包</span>
+          <span class="dl-soon" data-i18n="dl.apk.soon">准备中</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="section-head">
+        <p class="contact-kicker" data-i18n="contact.kicker">联系我们</p>
+        <h2 data-i18n="contact.title">有问题随时找我们</h2>
+        <p data-i18n="contact.lead">产品咨询、反馈或合作，邮件或微信都可以。</p>
+      </div>
+      <div class="contact-panel">
+        <div class="contact-block">
+          <h3 data-i18n="contact.support">支持与反馈</h3>
+          <p data-i18n="contact.support.d">使用问题、Bug、功能建议，发邮件即可。</p>
+          <a class="btn btn-primary" href="mailto:yunjiezhihui@cloudwisdom.site">yunjiezhihui@cloudwisdom.site</a>
+        </div>
+        <div class="contact-block">
+          <h3 data-i18n="contact.wechat">微信客服</h3>
+          <p data-i18n="contact.wechat.d">扫码添加，和 App 里「联系我们」是同一个二维码。</p>
+          <img class="contact-qr" src="assets/wechat-qr.png" width="160" height="160" alt="WeChat QR" />
+        </div>
+        <div class="contact-block">
+          <h3 data-i18n="contact.pub">开发者</h3>
+          <p data-i18n="contact.pub.d">LogStudio Dev<br />轻传 / QuickToss · 局域网文件互传</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot-brand">
+      <img src="assets/icon.png" width="28" height="28" alt="" />
+      <span data-i18n="brand">轻传</span>
+      <span class="foot-aka">QuickToss</span>
+    </div>
+    <p class="foot-dev">LogStudio Dev</p>
+    <div class="foot-links">
+      <a href="privacy.html" data-i18n="foot.privacy">隐私政策</a>
+      <a href="terms.html" data-i18n="foot.terms">使用协议</a>
+      <a href="#contact" data-i18n="foot.contact">联系我们</a>
+    </div>
+    <p class="foot-copy">© 2026 LogStudio Dev</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

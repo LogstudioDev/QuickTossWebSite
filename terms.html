@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>使用协议 · 轻传</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top">
+    <a class="top-brand" href="index.html">
+      <img src="assets/icon.png" width="36" height="36" alt="" />
+      <span data-i18n="brand">轻传</span>
+    </a>
+    <div class="lang" role="group" aria-label="Language" style="margin-left:auto">
+      <button type="button" class="lang-btn is-active" data-lang="zh">中文</button>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
+    </div>
+  </header>
+
+  <article class="legal-page">
+    <a class="legal-back" href="index.html" data-i18n="legal.back">← 返回首页</a>
+    <h1 data-i18n="terms.title">使用协议</h1>
+    <p class="legal-meta" data-i18n="terms.meta">更新日期：2026 年 10 月 12 日 · 生效日期：2026 年 10 月 12 日</p>
+
+    <div class="legal-zh">
+      <p>欢迎使用轻传（QuickToss，以下简称「本应用」）。本协议是你与 LogStudio Dev（以下简称「我们」）之间关于使用本应用的约定。使用本应用即表示你同意本协议。</p>
+      <h2>一、服务内容</h2>
+      <p>本应用免费提供同一 Wi‑Fi 里的设备之间的文件传输功能，不提供云端存储，不保留你的任何文件。</p>
+      <h2>二、使用规范</h2>
+      <p>请合法使用本应用，不要用它传输违法、侵权或侵犯他人隐私的内容，也不要在未经对方同意的情况下向其设备发送文件。你对自己传输的内容负责。请妥善保管配对码；如觉得已泄露，可在设置里更换。</p>
+      <h2>三、知识产权</h2>
+      <p>本应用的软件、名称、图标和界面设计的相关权利归我们所有。你通过本应用传输的文件，权利归原权利人所有。</p>
+      <h2>四、免责声明</h2>
+      <p>本应用按现状提供。传输效果受 Wi‑Fi、系统与省电策略等因素影响，我们不保证每次传输都能成功。重要文件请自行备份。在法律允许范围内，对于因使用或无法使用本应用造成的间接损失，我们不承担责任。</p>
+      <h2>五、协议变更</h2>
+      <p>我们可能随新版本更新本协议，更新后继续使用即表示同意。你可以随时停止使用并卸载。</p>
+      <h2>六、法律适用</h2>
+      <p>本协议适用中华人民共和国法律。</p>
+      <h2>七、联系我们</h2>
+      <p>邮箱：yunjiezhihui@cloudwisdom.site</p>
+    </div>
+
+    <div class="legal-en" hidden>
+      <p>Welcome to QuickToss (轻传, “the App”). These Terms are between you and LogStudio Dev (“we”). By using the App, you agree to these Terms.</p>
+      <h2>1. Service</h2>
+      <p>The App provides free file transfer between devices on the same Wi‑Fi. It does not offer cloud storage and does not retain your files.</p>
+      <h2>2. Acceptable use</h2>
+      <p>Use the App lawfully. Do not transfer illegal or infringing content, or send files without the recipient’s consent. You are responsible for what you transfer. Keep your pair code safe; rotate it in Settings if needed.</p>
+      <h2>3. Intellectual property</h2>
+      <p>Rights in the software, name, icon, and UI belong to us. Rights in files you transfer remain with their owners.</p>
+      <h2>4. Disclaimer</h2>
+      <p>The App is provided as is. Transfers depend on Wi‑Fi and device conditions; success is not guaranteed. Back up important files. To the extent permitted by law, we are not liable for indirect losses from use or inability to use the App.</p>
+      <h2>5. Changes</h2>
+      <p>We may update these Terms with new versions. Continued use means acceptance. You may stop using and uninstall at any time.</p>
+      <h2>6. Governing law</h2>
+      <p>These Terms are governed by the laws of the People’s Republic of China.</p>
+      <h2>7. Contact</h2>
+      <p>Email: yunjiezhihui@cloudwisdom.site</p>
+    </div>
+  </article>
+
+  <script>
+    const dict = {
+      zh: {
+        brand: "轻传",
+        "legal.back": "← 返回首页",
+        "terms.title": "使用协议",
+        "terms.meta": "更新日期：2026 年 10 月 12 日 · 生效日期：2026 年 10 月 12 日",
+      },
+      en: {
+        brand: "QuickToss",
+        "legal.back": "← Home",
+        "terms.title": "Terms of Use",
+        "terms.meta": "Updated: Oct 12, 2026 · Effective: Oct 12, 2026",
+      },
+    };
+    const apply = (lang) => {
+      const pack = dict[lang] || dict.zh;
+      document.documentElement.lang = lang === "en" ? "en" : "zh-CN";
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const k = el.getAttribute("data-i18n");
+        if (pack[k] != null) el.textContent = pack[k];
+      });
+      document.querySelectorAll(".lang-btn").forEach((b) => {
+        b.classList.toggle("is-active", b.dataset.lang === lang);
+      });
+      document.querySelector(".legal-zh").hidden = lang === "en";
+      document.querySelector(".legal-en").hidden = lang !== "en";
+      document.title = lang === "en" ? "Terms of Use · QuickToss" : "使用协议 · 轻传";
+      localStorage.setItem("qt-lang", lang);
+    };
+    const saved = localStorage.getItem("qt-lang");
+    apply(saved === "en" ? "en" : "zh");
+    document.querySelectorAll(".lang-btn").forEach((b) => {
+      b.addEventListener("click", () => apply(b.dataset.lang));
+    });
+  </script>
+</body>
+</html>

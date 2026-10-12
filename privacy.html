@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>隐私政策 · 轻传</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top">
+    <a class="top-brand" href="index.html">
+      <img src="assets/icon.png" width="36" height="36" alt="" />
+      <span data-i18n="brand">轻传</span>
+    </a>
+    <div class="lang" role="group" aria-label="Language" style="margin-left:auto">
+      <button type="button" class="lang-btn is-active" data-lang="zh">中文</button>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
+    </div>
+  </header>
+
+  <article class="legal-page">
+    <a class="legal-back" href="index.html" data-i18n="legal.back">← 返回首页</a>
+    <h1 data-i18n="privacy.title">隐私政策</h1>
+    <p class="legal-meta" data-i18n="privacy.meta">更新日期：2026 年 10 月 12 日 · 生效日期：2026 年 10 月 12 日</p>
+
+    <div class="legal-zh">
+      <p>轻传（QuickToss，以下简称「本应用」）由 LogStudio Dev（以下简称「我们」）开发，是一款在同一 Wi‑Fi 里的设备之间传文件的工具。本应用不联网、没有账号、没有广告。本政策说明本应用如何处理你的信息。</p>
+      <h2>一、我们不收集你的个人信息</h2>
+      <p>本应用不连接我们或任何第三方的服务器，不需要注册或登录，不包含广告、统计、崩溃上报等任何第三方 SDK。你的任何信息都不会发送给我们。</p>
+      <h2>二、保存在你设备上的信息</h2>
+      <p>为了让传输正常工作，本应用只在你的设备上保存：设备名、随机生成的设备标识、本机配对码与已配对设备信息、最近 100 条传输记录。这些信息不会离开你的设备；卸载本应用后一并清除。</p>
+      <h2>三、在局域网里能被看到的信息</h2>
+      <p>本应用会在局域网里广播设备名、设备类型和设备标识。文件在两台设备之间直接传输，不经过任何服务器。传输内容在局域网里没有端到端加密之外的额外保护层时，请勿在公共 Wi‑Fi 传输敏感文件。</p>
+      <h2>四、你发送和收到的文件</h2>
+      <p>你选择发送的文件只会传给你指定的设备。收到的文件保存在本机相册或下载等本地位置，具体见应用内说明。</p>
+      <h2>五、权限说明</h2>
+      <p>本应用仅申请本地网络、通知、相册写入等与收发文件直接相关的系统权限。你可以随时在系统设置里关闭。</p>
+      <h2>六、联系我们</h2>
+      <p>邮箱：yunjiezhihui@cloudwisdom.site</p>
+    </div>
+
+    <div class="legal-en" hidden>
+      <p>QuickToss (轻传, “the App”) is developed by LogStudio Dev (“we”). It transfers files between devices on the same Wi‑Fi. The App does not require an internet account and shows no ads. This policy explains how information is handled.</p>
+      <h2>1. We do not collect personal information</h2>
+      <p>The App does not connect to our or third-party servers, does not require registration, and includes no advertising, analytics, or crash SDKs. Nothing is sent to us.</p>
+      <h2>2. Data stored only on your device</h2>
+      <p>To operate, the App stores on-device only: device name, a random device id, pair codes and paired-device info, and up to 100 transfer history entries. This data never leaves your device and is removed when you uninstall.</p>
+      <h2>3. What is visible on the LAN</h2>
+      <p>The App advertises device name, type, and id on the local network. Files transfer directly between devices. Avoid sending sensitive files on public Wi‑Fi.</p>
+      <h2>4. Files you send or receive</h2>
+      <p>Only files you choose are sent to devices you select. Received files are saved locally (gallery, Downloads, etc.).</p>
+      <h2>5. Permissions</h2>
+      <p>We request only permissions needed for discovery, transfer, notifications, and saving media. You can revoke them in system settings.</p>
+      <h2>6. Contact</h2>
+      <p>Email: yunjiezhihui@cloudwisdom.site</p>
+    </div>
+  </article>
+
+  <script>
+    const dict = {
+      zh: {
+        brand: "轻传",
+        "legal.back": "← 返回首页",
+        "privacy.title": "隐私政策",
+        "privacy.meta": "更新日期：2026 年 10 月 12 日 · 生效日期：2026 年 10 月 12 日",
+      },
+      en: {
+        brand: "QuickToss",
+        "legal.back": "← Home",
+        "privacy.title": "Privacy Policy",
+        "privacy.meta": "Updated: Oct 12, 2026 · Effective: Oct 12, 2026",
+      },
+    };
+    const apply = (lang) => {
+      const pack = dict[lang] || dict.zh;
+      document.documentElement.lang = lang === "en" ? "en" : "zh-CN";
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const k = el.getAttribute("data-i18n");
+        if (pack[k] != null) el.textContent = pack[k];
+      });
+      document.querySelectorAll(".lang-btn").forEach((b) => {
+        b.classList.toggle("is-active", b.dataset.lang === lang);
+      });
+      document.querySelector(".legal-zh").hidden = lang === "en";
+      document.querySelector(".legal-en").hidden = lang !== "en";
+      document.title = lang === "en" ? "Privacy Policy · QuickToss" : "隐私政策 · 轻传";
+      localStorage.setItem("qt-lang", lang);
+    };
+    const saved = localStorage.getItem("qt-lang");
+    apply(saved === "en" ? "en" : "zh");
+    document.querySelectorAll(".lang-btn").forEach((b) => {
+      b.addEventListener("click", () => apply(b.dataset.lang));
+    });
+  </script>
+</body>
+</html>
