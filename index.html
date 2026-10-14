@@ -50,7 +50,7 @@
         <p class="hero-brand" data-i18n="brand">轻传</p>
         <p class="hero-aka">QuickToss</p>
         <h1 data-i18n="hero.title">无需云端，与附近设备分享文件</h1>
-        <p class="hero-lead" data-i18n="hero.lead">安卓、iPhone、iPad、Mac 同一 Wi‑Fi 直接互传。快速、私密、离线。原画质不压缩，无账号、无广告。</p>
+        <p class="hero-lead" data-i18n="hero.lead">安卓、iPhone、iPad、Mac、Windows 同一 Wi‑Fi 直接互传。快速、私密、离线。原画质不压缩，无账号、无广告。</p>
         <ul class="hero-pills" aria-label="highlights">
           <li data-i18n="hero.pill1">跨系统</li>
           <li data-i18n="hero.pill2">原画质</li>
@@ -62,26 +62,33 @@
         </div>
       </div>
 
-      <div class="hero-stage hero-stage-desk" aria-hidden="true">
-        <div class="stage-device stage-phone"><span class="stage-label">Phone</span></div>
-        <div class="stage-beam"><span class="packet p1"></span><span class="packet p2"></span><span class="packet p3"></span></div>
-        <div class="stage-icon"><img src="assets/icon.png" width="200" height="200" alt="" /></div>
-        <div class="stage-beam stage-beam-r"><span class="packet p1"></span><span class="packet p2"></span><span class="packet p3"></span></div>
-        <div class="stage-device stage-mac"><span class="stage-label">Mac</span></div>
-      </div>
+      <!-- Four platforms in the corners, all linked to each other -->
+      <div class="hero-stage" aria-hidden="true">
+        <div class="stage-mesh">
+          <div class="mesh-link link-top"><span class="packet p1"></span><span class="packet p2"></span><span class="packet p3"></span></div>
+          <div class="mesh-link link-bottom"><span class="packet p1"></span><span class="packet p2"></span><span class="packet p3"></span></div>
+          <div class="mesh-link link-left"><span class="packet p1"></span><span class="packet p2"></span><span class="packet p3"></span></div>
+          <div class="mesh-link link-right"><span class="packet p1"></span><span class="packet p2"></span><span class="packet p3"></span></div>
 
-      <div class="hero-stage hero-stage-mobi" aria-hidden="true">
-        <div class="stage-device stage-phone"><span class="stage-label">Phone</span></div>
-        <div class="stage-beam"><span class="packet p1"></span><span class="packet p2"></span><span class="packet p3"></span></div>
-        <div class="stage-icon"><img src="assets/icon.png" width="64" height="64" alt="" /></div>
-        <div class="stage-beam stage-beam-r"><span class="packet p1"></span><span class="packet p2"></span><span class="packet p3"></span></div>
-        <div class="stage-device stage-mac"><span class="stage-label">Mac</span></div>
+          <div class="stage-device stage-android corner-tl"><span class="stage-label" data-i18n="stage.android">安卓</span></div>
+          <div class="stage-device stage-mac corner-tr"><span class="stage-label" data-i18n="stage.mac">Mac</span></div>
+          <div class="stage-device stage-iphone corner-bl"><span class="stage-label" data-i18n="stage.iphone">iPhone</span></div>
+          <div class="stage-device stage-windows corner-br"><span class="stage-label" data-i18n="stage.windows">Windows</span></div>
+
+          <div class="stage-brand">
+            <img src="assets/icon.png" width="96" height="96" alt="" />
+            <div class="stage-brand-text">
+              <strong data-i18n="brand">轻传</strong>
+              <span data-i18n="stage.aka">QuickToss</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="stats" aria-label="facts">
       <div class="stats-inner">
-        <div class="stat"><strong data-i18n="stats.s1.n">4</strong><span data-i18n="stats.s1.l">个平台互通</span></div>
+        <div class="stat"><strong data-i18n="stats.s1.n">4</strong><span data-i18n="stats.s1.l">大平台互通</span></div>
         <div class="stat"><strong data-i18n="stats.s2.n">0</strong><span data-i18n="stats.s2.l">广告与追踪</span></div>
         <div class="stat"><strong data-i18n="stats.s3.n">~80</strong><span data-i18n="stats.s3.l">MB/s（5G Wi‑Fi 实测）</span></div>
         <div class="stat"><strong data-i18n="stats.s4.n">HTTPS</strong><span data-i18n="stats.s4.l">加密直连</span></div>
@@ -99,7 +106,7 @@
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 7h6v10H4V7zm10 0h6v10h-6V7zM10 12h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
           <strong data-i18n="features.f1.t">四端互通</strong>
-          <span data-i18n="features.f1.d">安卓、iPhone、iPad、Mac 同一 Wi‑Fi 互相发现、互相传。Windows 即将推出。</span>
+          <span data-i18n="features.f1.d">安卓、iPhone、iPad、Mac、Windows 同一 Wi‑Fi 互相发现、互相传。</span>
         </li>
         <li class="feature-card">
           <span class="feature-icon" aria-hidden="true">
@@ -326,11 +333,11 @@
         </details>
         <details class="faq-item">
           <summary data-i18n="faq.q7">有文件大小限制吗？</summary>
-          <p data-i18n="faq.a7">当前版本单文件上限 2GB。我们正在做大文件、断点续传和校验，上架前会根据压力测试决定正式上限。</p>
+          <p data-i18n="faq.a7">当前开发版不设单文件上限。我们正在做断点续传和校验，上架前会根据压力测试决定正式上限。</p>
         </details>
         <details class="faq-item">
           <summary data-i18n="faq.q8">支持哪些平台？</summary>
-          <p data-i18n="faq.a8">现已支持 Android、iPhone / iPad、Mac。Windows 即将推出。暂无 Linux 版。</p>
+          <p data-i18n="faq.a8">支持 Android、iPhone / iPad、Mac、Windows。暂无 Linux 版。</p>
         </details>
       </div>
     </section>
