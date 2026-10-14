@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>轻传 · QuickToss</title>
-  <meta name="description" content="同一 Wi‑Fi，手机与电脑之间直接传文件。无账号，不经过云，无广告。" />
+  <meta name="description" content="同一 Wi‑Fi，安卓、iPhone、iPad、Mac 之间直接传文件。原画质、不经过云、无账号、无广告。" />
   <meta property="og:title" content="轻传 · QuickToss" />
-  <meta property="og:description" content="同一 Wi‑Fi，手机与电脑之间直接传文件。无账号，不经过云，无广告。" />
+  <meta property="og:description" content="同一 Wi‑Fi，安卓、iPhone、iPad、Mac 之间直接传文件。原画质、不经过云、无账号、无广告。" />
   <meta property="og:image" content="assets/icon.png" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,10 +23,12 @@
       <span data-i18n="brand">轻传</span>
     </a>
     <nav class="top-nav">
+      <a href="#features" data-i18n="nav.features">功能</a>
       <a href="#how" data-i18n="nav.how">怎么用</a>
-      <a href="#features" data-i18n="nav.features">特点</a>
+      <a href="#compare" data-i18n="nav.compare">对比</a>
       <a href="#screens" data-i18n="nav.screens">界面</a>
-      <a href="#download" data-i18n="nav.download">下载</a>
+      <a href="#faq" data-i18n="nav.faq">常见问题</a>
+      <a href="download.html" data-i18n="nav.download">下载</a>
       <a href="#contact" data-i18n="nav.contact">联系</a>
       <a href="https://logstudiodev.github.io/LogSuiteWebSite/" target="_blank" rel="noopener noreferrer" data-i18n="nav.more">其他产品</a>
     </nav>
@@ -45,128 +47,225 @@
       </div>
 
       <div class="hero-copy">
-        <p class="hero-brand" data-i18n="hero.brand">轻传</p>
-        <p class="hero-aka" data-i18n="hero.aka">QuickToss</p>
-        <h1 data-i18n="hero.title">同一 Wi‑Fi，文件直接过去</h1>
-        <p class="hero-lead" data-i18n="hero.lead">安卓、iPhone、iPad、Mac 互相传。无账号，不经过云，无广告。</p>
+        <p class="hero-brand" data-i18n="brand">轻传</p>
+        <p class="hero-aka">QuickToss</p>
+        <h1 data-i18n="hero.title">无需云端，与附近设备分享文件</h1>
+        <p class="hero-lead" data-i18n="hero.lead">安卓、iPhone、iPad、Mac 同一 Wi‑Fi 直接互传。快速、私密、离线。原画质不压缩，无账号、无广告。</p>
+        <ul class="hero-pills" aria-label="highlights">
+          <li data-i18n="hero.pill1">跨系统</li>
+          <li data-i18n="hero.pill2">原画质</li>
+          <li data-i18n="hero.pill3">不经过云</li>
+        </ul>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="#download" data-i18n="hero.cta">立即下载</a>
+          <a class="btn btn-primary" href="download.html" data-i18n="hero.cta">立即下载</a>
           <a class="btn btn-ghost" href="#how" data-i18n="hero.secondary">看看怎么用</a>
         </div>
       </div>
 
-      <!-- Desktop: large transfer stage fills the right column -->
       <div class="hero-stage hero-stage-desk" aria-hidden="true">
-        <div class="stage-device stage-phone">
-          <span class="stage-label">Phone</span>
-        </div>
-        <div class="stage-beam">
-          <span class="packet p1"></span>
-          <span class="packet p2"></span>
-          <span class="packet p3"></span>
-        </div>
-        <div class="stage-icon">
-          <img src="assets/icon.png" width="200" height="200" alt="" />
-        </div>
-        <div class="stage-beam stage-beam-r">
-          <span class="packet p1"></span>
-          <span class="packet p2"></span>
-          <span class="packet p3"></span>
-        </div>
-        <div class="stage-device stage-mac">
-          <span class="stage-label">Mac</span>
-        </div>
+        <div class="stage-device stage-phone"><span class="stage-label">Phone</span></div>
+        <div class="stage-beam"><span class="packet p1"></span><span class="packet p2"></span><span class="packet p3"></span></div>
+        <div class="stage-icon"><img src="assets/icon.png" width="200" height="200" alt="" /></div>
+        <div class="stage-beam stage-beam-r"><span class="packet p1"></span><span class="packet p2"></span><span class="packet p3"></span></div>
+        <div class="stage-device stage-mac"><span class="stage-label">Mac</span></div>
       </div>
 
-      <!-- Mobile: compact stage, separate sizing -->
       <div class="hero-stage hero-stage-mobi" aria-hidden="true">
-        <div class="stage-device stage-phone">
-          <span class="stage-label">Phone</span>
-        </div>
-        <div class="stage-beam">
-          <span class="packet p1"></span>
-          <span class="packet p2"></span>
-          <span class="packet p3"></span>
-        </div>
-        <div class="stage-icon">
-          <img src="assets/icon.png" width="64" height="64" alt="" />
-        </div>
-        <div class="stage-beam stage-beam-r">
-          <span class="packet p1"></span>
-          <span class="packet p2"></span>
-          <span class="packet p3"></span>
-        </div>
-        <div class="stage-device stage-mac">
-          <span class="stage-label">Mac</span>
-        </div>
+        <div class="stage-device stage-phone"><span class="stage-label">Phone</span></div>
+        <div class="stage-beam"><span class="packet p1"></span><span class="packet p2"></span><span class="packet p3"></span></div>
+        <div class="stage-icon"><img src="assets/icon.png" width="64" height="64" alt="" /></div>
+        <div class="stage-beam stage-beam-r"><span class="packet p1"></span><span class="packet p2"></span><span class="packet p3"></span></div>
+        <div class="stage-device stage-mac"><span class="stage-label">Mac</span></div>
       </div>
+    </section>
+
+    <section class="stats" aria-label="facts">
+      <div class="stats-inner">
+        <div class="stat"><strong data-i18n="stats.s1.n">4</strong><span data-i18n="stats.s1.l">个平台互通</span></div>
+        <div class="stat"><strong data-i18n="stats.s2.n">0</strong><span data-i18n="stats.s2.l">广告与追踪</span></div>
+        <div class="stat"><strong data-i18n="stats.s3.n">~80</strong><span data-i18n="stats.s3.l">MB/s（5G Wi‑Fi 实测）</span></div>
+        <div class="stat"><strong data-i18n="stats.s4.n">HTTPS</strong><span data-i18n="stats.s4.l">加密直连</span></div>
+      </div>
+    </section>
+
+    <section class="section features" id="features">
+      <div class="section-head">
+        <h2 data-i18n="features.title">你需要的，都在局域网里完成</h2>
+        <p data-i18n="features.lead">轻传只做一件事：把文件、文字、实况照片稳稳送到另一台设备，不压缩、不上传。</p>
+      </div>
+      <ul class="feature-grid feature-grid-3">
+        <li class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 7h6v10H4V7zm10 0h6v10h-6V7zM10 12h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <strong data-i18n="features.f1.t">四端互通</strong>
+          <span data-i18n="features.f1.d">安卓、iPhone、iPad、Mac 同一 Wi‑Fi 互相发现、互相传。Windows 即将推出。</span>
+        </li>
+        <li class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 3v10m0 0l-3.5-3.5M12 13l3.5-3.5M5 16.5V19a2 2 0 002 2h10a2 2 0 002-2v-2.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <strong data-i18n="features.f2.t">不经过云</strong>
+          <span data-i18n="features.f2.d">文件只在两台设备之间走，不经过任何服务器，不需要互联网。</span>
+        </li>
+        <li class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M8 11V8a4 4 0 118 0v3M6.5 11h11a1.5 1.5 0 011.5 1.5v6A1.5 1.5 0 0117.5 20h-11A1.5 1.5 0 015 18.5v-6A1.5 1.5 0 016.5 11z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <strong data-i18n="features.f3.t">无账号无广告</strong>
+          <span data-i18n="features.f3.d">打开就能用。没有注册，没有追踪，没有广告。</span>
+        </li>
+        <li class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 8.5A2.5 2.5 0 016.5 6h11A2.5 2.5 0 0120 8.5v7a2.5 2.5 0 01-2.5 2.5h-11A2.5 2.5 0 014 15.5v-7zM8 12h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </span>
+          <strong data-i18n="features.f4.t">原画质不压缩</strong>
+          <span data-i18n="features.f4.d">照片、视频按原文件传输。拍摄时间、定位等信息尽量原样保留。</span>
+        </li>
+        <li class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M7 11V8a5 5 0 0110 0v3M12 14v3M8.5 21h7A2.5 2.5 0 0018 18.5v-6A2.5 2.5 0 0015.5 10h-7A2.5 2.5 0 006 12.5v6A2.5 2.5 0 008.5 21z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <strong data-i18n="features.f5.t">配对才可发</strong>
+          <span data-i18n="features.f5.d">6 位配对码 + 对方点「允许」。只知道码发不过去。全程 HTTPS 加密。</span>
+        </li>
+        <li class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 7h16v3H4V7zm0 7h10v3H4v-3zm0-3.5h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </span>
+          <strong data-i18n="features.f6.t">文字与链接</strong>
+          <span data-i18n="features.f6.d">在 App 里输入文字或链接发给对方，对方可复制或一键打开。</span>
+        </li>
+        <li class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 7a2 2 0 012-2h4l2 2h6a2 2 0 012 2v9a2 2 0 01-2 2H6a2 2 0 01-2-2V7z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </span>
+          <strong data-i18n="features.f7.t">文件夹</strong>
+          <span data-i18n="features.f7.d">整夹发送，保留目录结构。大文件、超多文件也能稳稳传完。</span>
+        </li>
+        <li class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M5 7h14v12H5V7zm3-3h8v3H8V4zm4 8v5m0 0l-2-2m2 2l2-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <strong data-i18n="features.f8.t">实况照片互通</strong>
+          <span data-i18n="features.f8.d">iPhone 实况 ↔ 安卓动态照片互转，视频部分一起带走，信息尽量不丢。</span>
+        </li>
+        <li class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 18V6m0 12l4-4 3 3 5-6 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <strong data-i18n="features.f9.t">大文件与多文件</strong>
+          <span data-i18n="features.f9.d">大文件分块续传、边传边校验；一次发很多文件也不卡，失败的可单独重试。</span>
+        </li>
+      </ul>
     </section>
 
     <section class="section how" id="how">
       <div class="section-head">
         <h2 data-i18n="how.title">三步开始传</h2>
-        <p data-i18n="how.lead">两台设备都装上，连同一个 Wi‑Fi。</p>
+        <p data-i18n="how.lead">两台设备都装上，连同一个 Wi‑Fi。无需账号，无需配置。</p>
       </div>
       <ol class="steps">
         <li class="step-card">
           <span class="step-num">01</span>
           <div class="step-body">
-            <strong data-i18n="how.s1.t">打开应用</strong>
-            <p data-i18n="how.s1.d">每台设备会显示自己的 6 位配对码。</p>
+            <strong data-i18n="how.s1.t">安装并打开</strong>
+            <p data-i18n="how.s1.d">每台设备会显示自己的 6 位配对码，并在局域网里自动被发现。</p>
           </div>
         </li>
         <li class="step-card">
           <span class="step-num">02</span>
           <div class="step-body">
             <strong data-i18n="how.s2.t">第一次配对</strong>
-            <p data-i18n="how.s2.d">填对方的码，对方点「允许」。以后不用再填。</p>
+            <p data-i18n="how.s2.d">填对方屏幕上的码，对方点「允许」。以后互发不用再填。</p>
           </div>
         </li>
         <li class="step-card">
           <span class="step-num">03</span>
           <div class="step-body">
             <strong data-i18n="how.s3.t">选文件发送</strong>
-            <p data-i18n="how.s3.d">照片、视频或任意文件，点附近设备即可发出。</p>
+            <p data-i18n="how.s3.d">照片、视频或任意文件，点附近设备即可发出。收完进相册或下载文件夹。</p>
           </div>
         </li>
       </ol>
+
+      <div class="safe-block">
+        <div class="section-head">
+          <h3 data-i18n="safe.title">为什么安全</h3>
+          <p data-i18n="safe.lead">文件不经过云，传输全程加密，还要对方亲手点「允许」。</p>
+        </div>
+        <ol class="safe-steps">
+          <li>
+            <strong data-i18n="safe.s1.t">自动发现</strong>
+            <p data-i18n="safe.s1.d">同一 Wi‑Fi 上的轻传设备互相广播，列表里就能看到对方。</p>
+          </li>
+          <li>
+            <strong data-i18n="safe.s2.t">配对确认</strong>
+            <p data-i18n="safe.s2.d">6 位码只是敲门；对方必须点「允许」才会建立信任。</p>
+          </li>
+          <li>
+            <strong data-i18n="safe.s3.t">加密直连</strong>
+            <p data-i18n="safe.s3.d">HTTPS + 证书指纹校验，文件只在两台设备之间走。</p>
+          </li>
+        </ol>
+      </div>
     </section>
 
-    <section class="section features" id="features">
+    <section class="section compare" id="compare">
       <div class="section-head">
-        <h2 data-i18n="features.title">只做一件事：把文件传过去</h2>
-        <p data-i18n="features.lead">局域网直连，配对一次，以后点一下就发。</p>
+        <h2 data-i18n="compare.title">为什么用轻传</h2>
+        <p data-i18n="compare.lead">和日常传文件的几种方式比一比。</p>
       </div>
-      <ul class="feature-grid">
-        <li class="feature-card">
-          <span class="feature-icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 3v10m0 0l-3.5-3.5M12 13l3.5-3.5M5 16.5V19a2 2 0 002 2h10a2 2 0 002-2v-2.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <strong data-i18n="features.f1.t">不经过云</strong>
-          <span data-i18n="features.f1.d">文件只在两台设备之间走，不上传到任何服务器。</span>
-        </li>
-        <li class="feature-card">
-          <span class="feature-icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M8 11V8a4 4 0 118 0v3M6.5 11h11a1.5 1.5 0 011.5 1.5v6A1.5 1.5 0 0117.5 20h-11A1.5 1.5 0 015 18.5v-6A1.5 1.5 0 016.5 11z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <strong data-i18n="features.f2.t">无账号无广告</strong>
-          <span data-i18n="features.f2.d">打开就能用。没有注册，没有追踪，没有广告。</span>
-        </li>
-        <li class="feature-card">
-          <span class="feature-icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M7 11V8a5 5 0 0110 0v3M12 14v3M8.5 21h7A2.5 2.5 0 0018 18.5v-6A2.5 2.5 0 0015.5 10h-7A2.5 2.5 0 006 12.5v6A2.5 2.5 0 008.5 21z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <strong data-i18n="features.f3.t">配对才可发</strong>
-          <span data-i18n="features.f3.d">对方屏幕上的 6 位码，还要对方点「允许」。只知道码发不过去。</span>
-        </li>
-        <li class="feature-card">
-          <span class="feature-icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 7h6v10H4V7zm10 0h6v10h-6V7zM10 12h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <strong data-i18n="features.f4.t">四端互通</strong>
-          <span data-i18n="features.f4.d">安卓、iPhone、iPad、Mac，同一 Wi‑Fi 就能互相找、互相传。</span>
-        </li>
-      </ul>
+      <div class="compare-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th data-i18n="compare.h0"></th>
+              <th class="is-highlight" data-i18n="compare.h1">轻传</th>
+              <th data-i18n="compare.h2">微信 / QQ</th>
+              <th data-i18n="compare.h3">数据线</th>
+              <th data-i18n="compare.h4">隔空投送</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th data-i18n="compare.r1">跨系统</th>
+              <td class="is-highlight" data-i18n="compare.y">✓</td>
+              <td data-i18n="compare.y">✓</td>
+              <td data-i18n="compare.cell.p">有限</td>
+              <td data-i18n="compare.cell.n.apple">仅苹果</td>
+            </tr>
+            <tr>
+              <th data-i18n="compare.r2">原画质 / 不压缩</th>
+              <td class="is-highlight" data-i18n="compare.y">✓</td>
+              <td data-i18n="compare.cell.n.compress">会压缩</td>
+              <td data-i18n="compare.y">✓</td>
+              <td data-i18n="compare.y">✓</td>
+            </tr>
+            <tr>
+              <th data-i18n="compare.r3">不经过云</th>
+              <td class="is-highlight" data-i18n="compare.y">✓</td>
+              <td data-i18n="compare.cell.n.cloud">走服务器</td>
+              <td data-i18n="compare.y">✓</td>
+              <td data-i18n="compare.y">✓</td>
+            </tr>
+            <tr>
+              <th data-i18n="compare.r4">不用账号</th>
+              <td class="is-highlight" data-i18n="compare.y">✓</td>
+              <td data-i18n="compare.cell.n.login">要登录</td>
+              <td data-i18n="compare.y">✓</td>
+              <td data-i18n="compare.y">✓</td>
+            </tr>
+            <tr>
+              <th data-i18n="compare.r5">不用线</th>
+              <td class="is-highlight" data-i18n="compare.y">✓</td>
+              <td data-i18n="compare.y">✓</td>
+              <td data-i18n="compare.cell.n.cable">必须插线</td>
+              <td data-i18n="compare.y">✓</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <section class="section screens" id="screens">
@@ -179,54 +278,14 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div class="carousel-track" data-carousel-track>
-          <figure class="phone-frame">
-            <div class="phone-shot">
-              <img src="assets/screens/1.png" width="800" height="1632" alt="" data-i18n-alt="screens.c1" loading="lazy" />
-            </div>
-            <figcaption data-i18n="screens.c1">截图 1</figcaption>
-          </figure>
-          <figure class="phone-frame">
-            <div class="phone-shot">
-              <img src="assets/screens/2.png" width="800" height="1632" alt="" data-i18n-alt="screens.c2" loading="lazy" />
-            </div>
-            <figcaption data-i18n="screens.c2">截图 2</figcaption>
-          </figure>
-          <figure class="phone-frame">
-            <div class="phone-shot">
-              <img src="assets/screens/3.png" width="800" height="1632" alt="" data-i18n-alt="screens.c3" loading="lazy" />
-            </div>
-            <figcaption data-i18n="screens.c3">截图 3</figcaption>
-          </figure>
-          <figure class="phone-frame">
-            <div class="phone-shot">
-              <img src="assets/screens/4.png" width="800" height="1632" alt="" data-i18n-alt="screens.c4" loading="lazy" />
-            </div>
-            <figcaption data-i18n="screens.c4">截图 4</figcaption>
-          </figure>
-          <figure class="phone-frame">
-            <div class="phone-shot">
-              <img src="assets/screens/5.png" width="800" height="1632" alt="" data-i18n-alt="screens.c5" loading="lazy" />
-            </div>
-            <figcaption data-i18n="screens.c5">截图 5</figcaption>
-          </figure>
-          <figure class="phone-frame">
-            <div class="phone-shot">
-              <img src="assets/screens/6.png" width="800" height="1632" alt="" data-i18n-alt="screens.c6" loading="lazy" />
-            </div>
-            <figcaption data-i18n="screens.c6">截图 6</figcaption>
-          </figure>
-          <figure class="phone-frame">
-            <div class="phone-shot">
-              <img src="assets/screens/7.png" width="800" height="1632" alt="" data-i18n-alt="screens.c7" loading="lazy" />
-            </div>
-            <figcaption data-i18n="screens.c7">截图 7</figcaption>
-          </figure>
-          <figure class="phone-frame">
-            <div class="phone-shot">
-              <img src="assets/screens/8.png" width="800" height="1632" alt="" data-i18n-alt="screens.c8" loading="lazy" />
-            </div>
-            <figcaption data-i18n="screens.c8">截图 8</figcaption>
-          </figure>
+          <figure class="phone-frame"><div class="phone-shot"><img src="assets/screens/1.png" width="800" height="1632" alt="" data-i18n-alt="screens.c1" loading="lazy" /></div><figcaption data-i18n="screens.c1">截图 1</figcaption></figure>
+          <figure class="phone-frame"><div class="phone-shot"><img src="assets/screens/2.png" width="800" height="1632" alt="" data-i18n-alt="screens.c2" loading="lazy" /></div><figcaption data-i18n="screens.c2">截图 2</figcaption></figure>
+          <figure class="phone-frame"><div class="phone-shot"><img src="assets/screens/3.png" width="800" height="1632" alt="" data-i18n-alt="screens.c3" loading="lazy" /></div><figcaption data-i18n="screens.c3">截图 3</figcaption></figure>
+          <figure class="phone-frame"><div class="phone-shot"><img src="assets/screens/4.png" width="800" height="1632" alt="" data-i18n-alt="screens.c4" loading="lazy" /></div><figcaption data-i18n="screens.c4">截图 4</figcaption></figure>
+          <figure class="phone-frame"><div class="phone-shot"><img src="assets/screens/5.png" width="800" height="1632" alt="" data-i18n-alt="screens.c5" loading="lazy" /></div><figcaption data-i18n="screens.c5">截图 5</figcaption></figure>
+          <figure class="phone-frame"><div class="phone-shot"><img src="assets/screens/6.png" width="800" height="1632" alt="" data-i18n-alt="screens.c6" loading="lazy" /></div><figcaption data-i18n="screens.c6">截图 6</figcaption></figure>
+          <figure class="phone-frame"><div class="phone-shot"><img src="assets/screens/7.png" width="800" height="1632" alt="" data-i18n-alt="screens.c7" loading="lazy" /></div><figcaption data-i18n="screens.c7">截图 7</figcaption></figure>
+          <figure class="phone-frame"><div class="phone-shot"><img src="assets/screens/8.png" width="800" height="1632" alt="" data-i18n-alt="screens.c8" loading="lazy" /></div><figcaption data-i18n="screens.c8">截图 8</figcaption></figure>
         </div>
         <button class="carousel-nav carousel-next" type="button" aria-label="Next" data-carousel-next>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -235,66 +294,129 @@
       </div>
     </section>
 
+    <section class="section faq" id="faq">
+      <div class="section-head">
+        <h2 data-i18n="faq.title">常见问题</h2>
+        <p data-i18n="faq.lead">快速了解轻传能不能解决你的问题。</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary data-i18n="faq.q1">真的免费吗？</summary>
+          <p data-i18n="faq.a1">是的。轻传免费使用，无广告、无追踪、无隐藏收费。</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q2">需要联网吗？能跨网传吗？</summary>
+          <p data-i18n="faq.a2">不需要互联网。两台设备连同一个 Wi‑Fi 即可。文件不会离开你的局域网，也不能通过互联网传给远方的人。</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q3">安全吗？</summary>
+          <p data-i18n="faq.a3">传输使用 HTTPS 加密，并用证书指纹校验对方身份。第一次发送还要输入对方的 6 位码，并由对方点「允许」。请勿在不可信的公共 Wi‑Fi 传输敏感文件。</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q4">文件保存在哪里？</summary>
+          <p data-i18n="faq.a4">安卓：照片进 Pictures/EasyDrop，视频进 Movies/EasyDrop，其他进 Download/EasyDrop。iPhone / iPad：照片视频进系统相册，其他进「文件」App。Mac：默认进「下载」文件夹，可在设置里改。</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q5">会压缩照片吗？拍摄时间和定位会丢吗？</summary>
+          <p data-i18n="faq.a5">不会按社交软件那样压缩。文件按原样传输。第一期还会加强：尽量保留拍摄时间、定位等原始信息；实况照片与安卓动态照片互转也在做。</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q6">为什么找不到设备？</summary>
+          <p data-i18n="faq.a6">请确认：两边都打开了轻传；连的是同一个 Wi‑Fi（不是个人热点或访客网络）；手机 / 电脑已允许「本地网络」权限；尽量关掉 VPN 或代理后再试。</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q7">有文件大小限制吗？</summary>
+          <p data-i18n="faq.a7">当前版本单文件上限 2GB。我们正在做大文件、断点续传和校验，上架前会根据压力测试决定正式上限。</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q8">支持哪些平台？</summary>
+          <p data-i18n="faq.a8">现已支持 Android、iPhone / iPad、Mac。Windows 即将推出。暂无 Linux 版。</p>
+        </details>
+      </div>
+    </section>
+
     <section class="section download" id="download">
       <div class="section-head">
-        <h2 data-i18n="dl.title">下载</h2>
-        <p data-i18n="dl.lead">选你的平台。商店上架后链接会更新到这里。</p>
+        <h2 data-i18n="dl.title">下载轻传</h2>
+        <p data-i18n="dl.lead">选你的平台。商店链接与安装包准备好后会更新到下载页。</p>
       </div>
       <div class="dl-grid">
-        <a class="dl-item" href="#" data-store="ios" aria-disabled="true">
+        <a class="dl-item" href="download.html#android">
+          <span class="dl-platform" data-i18n="dl.android">Android</span>
+          <span class="dl-store">Google Play / APK</span>
+          <span class="dl-soon" data-i18n="dl.soon">即将上架</span>
+        </a>
+        <a class="dl-item" href="download.html#ios">
           <span class="dl-platform" data-i18n="dl.ios">iPhone / iPad</span>
           <span class="dl-store">App Store</span>
           <span class="dl-soon" data-i18n="dl.soon">即将上架</span>
         </a>
-        <a class="dl-item" href="#" data-store="mac" aria-disabled="true">
+        <a class="dl-item" href="download.html#mac">
           <span class="dl-platform" data-i18n="dl.mac">Mac</span>
           <span class="dl-store">Mac App Store</span>
           <span class="dl-soon" data-i18n="dl.soon">即将上架</span>
         </a>
-        <a class="dl-item" href="#" data-store="play" aria-disabled="true">
-          <span class="dl-platform" data-i18n="dl.android">Android</span>
-          <span class="dl-store">Google Play</span>
-          <span class="dl-soon" data-i18n="dl.soon">即将上架</span>
-        </a>
-        <a class="dl-item dl-item-ready" href="#" data-store="apk" id="apk-link">
-          <span class="dl-platform" data-i18n="dl.apk">Android APK</span>
-          <span class="dl-store" data-i18n="dl.apk.sub">官方安装包</span>
-          <span class="dl-soon" data-i18n="dl.apk.soon">准备中</span>
+        <a class="dl-item" href="download.html#windows">
+          <span class="dl-platform" data-i18n="dl.windows">Windows</span>
+          <span class="dl-store" data-i18n="dl.windows.sub">微软商店</span>
+          <span class="dl-soon" data-i18n="dl.soon">即将推出</span>
         </a>
       </div>
+      <p class="dl-more"><a href="download.html" data-i18n="dl.more">查看完整下载页 →</a></p>
     </section>
 
     <section class="section contact" id="contact">
       <div class="section-head">
         <p class="contact-kicker" data-i18n="contact.kicker">联系我们</p>
         <h2 data-i18n="contact.title">有问题随时找我们</h2>
-        <p data-i18n="contact.lead">产品咨询、反馈或合作，发邮件即可。</p>
+        <p data-i18n="contact.lead">产品问题、反馈或合作，发邮件即可。我们会尽快回复。</p>
       </div>
-      <div class="contact-panel contact-panel-email">
+      <div class="contact-panel">
         <div class="contact-block">
-          <h3 data-i18n="contact.support">支持与反馈</h3>
-          <p data-i18n="contact.support.d">使用问题、Bug、功能建议，发邮件即可。</p>
-          <a class="btn btn-primary" href="mailto:yunjiezhihui@cloudwisdom.site">yunjiezhihui@cloudwisdom.site</a>
+          <h3 data-i18n="contact.bug">报告问题</h3>
+          <p data-i18n="contact.bug.d">传不过去、找不到设备、崩溃等，告诉我们设备和现象。</p>
+          <a class="btn btn-primary" href="mailto:logstudio.dev@outlook.com?subject=%E8%BD%BB%E4%BC%A0%20Bug%20%E5%8F%8D%E9%A6%88" data-i18n="contact.email">发邮件</a>
         </div>
         <div class="contact-block">
-          <h3 data-i18n="contact.pub">开发者</h3>
-          <p data-i18n="contact.pub.d">LogStudio Dev<br />轻传 / QuickToss · 局域网文件互传</p>
+          <h3 data-i18n="contact.idea">功能建议</h3>
+          <p data-i18n="contact.idea.d">你觉得还缺什么？欢迎告诉我们。</p>
+          <a class="btn btn-primary" href="mailto:logstudio.dev@outlook.com?subject=%E8%BD%BB%E4%BC%A0%20%E5%8A%9F%E8%83%BD%E5%BB%BA%E8%AE%AE" data-i18n="contact.email">发邮件</a>
+        </div>
+        <div class="contact-block">
+          <h3 data-i18n="contact.biz">合作咨询</h3>
+          <p data-i18n="contact.biz.d">媒体、渠道或商务合作。</p>
+          <a class="btn btn-primary" href="mailto:logstudio.dev@outlook.com?subject=%E8%BD%BB%E4%BC%A0%20%E5%90%88%E4%BD%9C%E5%92%A8%E8%AF%A2" data-i18n="contact.email">发邮件</a>
         </div>
       </div>
+      <p class="contact-addr"><span data-i18n="contact.pub">开发者</span> · LogStudio Dev · <a href="mailto:logstudio.dev@outlook.com">logstudio.dev@outlook.com</a></p>
     </section>
   </main>
 
-  <footer class="foot">
-    <div class="foot-brand">
-      <img src="assets/icon.png" width="28" height="28" alt="" />
-      <span data-i18n="brand">轻传</span>
-      <span class="foot-aka">QuickToss</span>
+  <footer class="foot foot-grid">
+    <div class="foot-col">
+      <div class="foot-brand">
+        <img src="assets/icon.png" width="28" height="28" alt="" />
+        <span data-i18n="brand">轻传</span>
+        <span class="foot-aka">QuickToss</span>
+      </div>
+      <p class="foot-tag" data-i18n="foot.tag">无需互联网，与附近设备分享文件。</p>
     </div>
-    <p class="foot-dev">LogStudio Dev</p>
-    <div class="foot-links">
+    <div class="foot-col">
+      <h4 data-i18n="foot.product">产品</h4>
+      <a href="download.html" data-i18n="nav.download">下载</a>
+      <a href="#features" data-i18n="nav.features">功能</a>
+      <a href="#how" data-i18n="nav.how">怎么用</a>
+      <a href="https://logstudiodev.github.io/LogSuiteWebSite/" target="_blank" rel="noopener noreferrer" data-i18n="nav.more">其他产品</a>
+    </div>
+    <div class="foot-col">
+      <h4 data-i18n="foot.help">帮助</h4>
+      <a href="#faq" data-i18n="nav.faq">常见问题</a>
+      <a href="#contact" data-i18n="nav.contact">联系我们</a>
+    </div>
+    <div class="foot-col">
+      <h4 data-i18n="foot.legal">法律</h4>
       <a href="privacy.html" data-i18n="foot.privacy">隐私政策</a>
       <a href="terms.html" data-i18n="foot.terms">使用协议</a>
-      <a href="#contact" data-i18n="foot.contact">联系我们</a>
     </div>
     <p class="foot-copy">© 2026 LogStudio Dev</p>
   </footer>
